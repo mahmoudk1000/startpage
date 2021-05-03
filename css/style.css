@@ -1,10 +1,17 @@
+:root {
+  /* Colors */
+  --darkbg: #0e0f15;
+  --lightbg: #161821;
+  --fg: #dedbeb;
+  --accent: #81a0c6;
+}
 * {
   font-family: Poppins;
-  color: #dedbeb;
+  color: #var(--fg);
   text-decoration: none;
 }
 .body {
-  background-color: #0e0f15;
+  background-color: var(--darkbg);
   margin: 0;
   position: absolute;
   top: 50%;
@@ -19,6 +26,7 @@
   display: flex;
 }
 .clock {
+  color: var(--fg);
   justify-content: right;
   display: flex;
   font-family: Poppins;
@@ -30,6 +38,7 @@
   width: 100%;
 }
 .info_down {
+  color: var(--fg);
   justify-content: right;
   display: flex;
   font-family: Poppins;
@@ -39,10 +48,11 @@
   height: 50px;
 }
 .url {
+  color: var(--fg);
   font-size: 34px;
   text-align: center;
   border: 0px;
-  background-color: #161821;
+  background-color: var(--lightbg);
   height: 70px;
   width: 1200px;
   border-radius: 15px;
@@ -74,8 +84,9 @@
   margin-top: 20px;
 }
 .menu_name {
+  color: var(--fg);
   text-align: center;
-  background-color: #161821;
+  background-color: var(--lightbg);
   font-size: 36px;
   height: 50px;
   border-radius: 15px;
@@ -85,7 +96,10 @@
   height: 50px;
 }
 .in_list:hover {
-  background-color: #161821;
+  background-color: var(--lightbg);
   border-radius: 15px;
   height: 50px;
+}
+.link_text {
+  color: var(--fg);
 }
