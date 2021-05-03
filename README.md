@@ -8,6 +8,24 @@ Flat minimal start page made for elegant look and simple at same time.
 
 ![Flat startpage look!](/screen.png)
 
+## Pack as web-ext
+1.  Clone the repo
+```
+git clone https://github.com/mahmoudk1000/flat-startpage.git
+```
+
+2.  You need to install web--ext tool by runing terminal<br>
+```
+sudo npm install -g web-ext
+```
+
+3.  Check Firefox [ext-packing guide](https://extensionworkshop.com/)<br>
+
+4. Last step run in terminal in same dir where repo cloned
+```
+web-ext sign --api-key "YOUR_USER_KEY" --api-secret "YOUR_SECRET"
+```
+
 ## Weather
 For setting up the Weather widget you're going to need an API Key in: https://openweathermap.org/. Once you have your Key you'll need to set yourlatitude and longitude, you can use: https://www.latlong.net/ to get them. Then you just have to fill them in the weather.js in the js folder:
 ```js
