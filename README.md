@@ -11,3 +11,9 @@ This is still scratch an early look, very early in fact.
 
 
 ![alt text](https://github.com/mahmoudk1000/flat-startpage/blob/master/ss.png)
+
+
+### Credits
+
+[migueravila/Bento](https://github.com/migueravila/Bento) For time, date and weather script
+[MCotocel/startpage](https://github.com/MCotocel/startpage) For DuckDuckGo search script

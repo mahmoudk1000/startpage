@@ -1,1 +1,86 @@
-<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" /><link href="./css/main.css" rel="stylesheet" /><title>Document</title></head><body><div class="v0_3"><div class="v1_23"><div class="v1_49"><span class="v1_45">Translate</span><span class="v1_44">r/voidlinux</span><span class="v1_43">r/unixporn</span><span class="v1_42">Reddit</span></div><div class="v1_24"></div><span class="v1_25">World</span></div><div class="v1_20"><div class="v1_48"><span class="v1_41">Figma</span><span class="v1_40">UnSplash</span><span class="v1_39">FaselHD</span><span class="v1_38">Netflix</span></div><div class="v1_21"></div><span class="v1_22">Fun</span></div><div class="v1_17"><div class="v1_47"><span class="v1_37">Free4arab</span><span class="v1_36">Udemy</span><span class="v1_35">W3C</span><span class="v1_34">GitHub</span></div><div class="v1_18"></div><span class="v1_19">Tech</span></div><div class="v1_14"><div class="v1_46"><span class="v1_29">Wiki</span><span class="v1_28">Calender</span><span class="v1_27">Drive</span><span class="v1_26">Mail</span></div><div class="v1_15"></div><span class="v1_16">General</span></div><div class="v1_11"><div class="v1_9"></div><span class="v1_10">Search with DuckDuckGo</span></div><div class="v1_12"><div class="v1_2"></div><span class="v1_7">9:45 PM</span><span class="v1_8">2 May 2021 & 18 ℃</span></div></div></body></html>
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
+</head>
+<body class="body" style="margin: 0px auto;">
+    <div class="header">
+        <img class="pic" style="border-radius: 180px;height: 150px;width: 150px;" src="images/pic.png">
+        <div class="info">
+            <div class="clock">
+                <div id="hour" class=""></div>
+                <div id="separator" class=""></div>
+                <div id="minutes" class=""></div>
+            </div>
+            <div class="info_down">
+                <div id="day" class=""></div>
+                <div id="month" class=""></div>
+                <div id="year" class=""></div>
+                <div>&nbsp;•&nbsp;</div>
+                <div class="temperature-value">
+                    <p class="" style="margin-top: 0px;">- °<span class="g">c</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="form" role="search">
+        <div class="middle">
+            <input class="url" type="search" id="query" name="q" placeholder="Search With DuckDuckGo">
+        </div>
+        <script>
+            const f = document.getElementById("form");
+            const q = document.getElementById("query");
+            const search = "https://duckduckgo.com/?t=ffab&q=";
+      
+            function submitted(event) {
+              event.preventDefault();
+              const url = search + q.value + "&ia=web";
+              window.open(url, "_self");
+            }
+      
+            f.addEventListener("submit", submitted);
+        </script>
+    </form>
+    <div class="bookmarks">
+        <div class="menu_place">
+            <div class="menu_name">General</div>
+            <div class="list">
+                <a class="in_list" href="https://mail.google.com/mail/u/0/#inbox">Mail</a><br>
+                <a class="in_list" href="https://drive.google.com/drive/u/0/my-drive">Drive</a><br>
+                <a class="in_list" href="https://calendar.google.com/calendar/u/0/r?pli=1">Calender</a><br>
+                <a class="in_list" href="https://en.wikipedia.org/wiki/Main_Page">Wiki</a>
+            </div>
+        </div>
+        <div class="menu_place">
+            <div class="menu_name">Tech</div>
+            <div class="list">
+                <a class="in_list" href="https://github.com/">GitHub</a><br>
+                <a class="in_list" href="https://www.w3schools.com/">W3C</a><br>
+                <a class="in_list" href="https://www.udemy.com/">Udemy</a><br>
+                <a class="in_list" href="https://free4arab.net/">Free4arab</a>
+            </div>
+        </div>
+        <div class="menu_place">
+            <div class="menu_name">Fun</div>
+            <div class="list">
+                <a class="in_list" href="https://www.netflix.com/browse">Netflix</a><br>
+                <a class="in_list" href="https://www.faselhd.pro/home">FaselHD</a><br>
+                <a class="in_list" href="https://unsplash.com/">UnSplash</a><br>
+                <a class="in_list" href="https://www.figma.com">Figma</a>
+            </div>
+        </div>
+        <div class="menu_place">
+            <div class="menu_name">World</div>
+            <div class="list">
+                <a class="in_list" href="https://www.reddit.com/">Reddit</a><br>
+                <a class="in_list" href="https://www.reddit.com/r/unixporn/">r/unixporn</a><br>
+                <a class="in_list" href="https://twitter.com/">Twitter</a><br>
+                <a class="in_list" href="https://translate.google.com/">Translate</a>
+            </div>
+        </div>
+    </div>
+    <!--Scripts-->
+    <script src="js/time.js"></script>
+    <script src="js/weather.js"></script>
+</body>
