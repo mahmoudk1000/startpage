@@ -8,12 +8,30 @@ Flat minimal start page made for elegant look and simple at same time.
 
 ![Flat startpage look!](/screen.png)
 
+## Weather
+For setting up the Weather widget you're going to need an API Key in: https://openweathermap.org/. Once you have your Key you'll need to set yourlatitude and longitude, you can use: https://www.latlong.net/ to get them. Then you just have to fill them in the weather.js in the js folder:
+```js
+// Use your own key for the Weather, Get it here: https://openweathermap.org/
+const key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+setPosition();
+
+function setPosition(position) {
+  // Here you can change your position
+  // You can use https://www.latlong.net/ to get it! (I use San Francisco as an example)
+  let latitude = 37.774929;
+  let longitude = -122.419418;
+
+  getWeather(latitude, longitude);
+}
+```
+
 ## Update Pic photo
-  replace pic.png from images folder with the one you want.<br>
-  Note: The image could be square the rounded code from css. so i recommend to be square,
-  and also it would be good if it in 150px height and 150px wight too.
+replace pic.png from images folder with the one you want.<br>
+Note: The image could be square the rounded code from css. so i recommend to be square,
+and also it would be good if it in 150px height and 150px wight too.
 
 ## Credits
 
-[migueravila/Bento](https://github.com/migueravila/Bento) For time, date and weather script.<br>
+[migueravila/Bento](https://github.com/migueravila/Bento) For time, date and weather script and weather guide.<br>
 [MCotocel/startpage](https://github.com/MCotocel/startpage) For DuckDuckGo search script
