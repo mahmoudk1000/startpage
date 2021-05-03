@@ -3,13 +3,13 @@
 Flat minimal start page made for elegant look and simple at same time.
 
 
-[Figma](https://www.figma.com/file/pwdpYP5Mgg5CUtineWNqMJ/StartPage?node-id=0%3A3) for anyone seek interactive view from figma.
+[Figma](https://www.figma.com/file/pwdpYP5Mgg5CUtineWNqMJ/StartPage?node-id=0%3A3) for anyone who seeks interactive view.
 
 
-![Flat startpage look!](/ss.png)
+![Flat startpage look!](/screen.png)
 
 ## Update Pic photo
-  replace pic.png from images folder with the one you want.
+  replace pic.png from images folder with the one you want.<br>
   Note: The image could be square the rounded code from css. so i recommend to be square,
   and also it would be good if it in 150px height and 150px wight too.
 
