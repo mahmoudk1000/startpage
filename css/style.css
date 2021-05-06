@@ -94,7 +94,6 @@
 .in_list {
   border-radius: 15px;
   height: 45px;
-  padding-top: 8px;
 }
 .in_list:hover {
   background-color: var(--lightbg);
