@@ -29,19 +29,6 @@
         <div class="middle">
             <input class="url" type="search" id="query" name="q" placeholder="Search With DuckDuckGo">
         </div>
-        <script>
-            const f = document.getElementById("form");
-            const q = document.getElementById("query");
-            const search = "https://duckduckgo.com/?t=ffab&q=";
-      
-            function submitted(event) {
-              event.preventDefault();
-              const url = search + q.value + "&ia=web";
-              window.open(url, "_self");
-            }
-      
-            f.addEventListener("submit", submitted);
-        </script>
     </form>
     <div class="bookmarks">
         <div class="menu_place">
@@ -84,4 +71,5 @@
     <!--Scripts-->
     <script src="js/time.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/search.js"></script>
 </body>
