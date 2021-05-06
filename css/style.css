@@ -5,12 +5,8 @@
   --fg: #dedbeb;
   --accent: #81a0c6;
 }
-@font-face {
-  font-family: "iosevka";
-  src: url(fonts/iosevka-regular.ttf);
-}
 * {
-  font-family: iosevka;
+  font-family: Poppins;
   color: #var(--fg);
   text-decoration: none;
 }
@@ -33,7 +29,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: iosevka;
+  font-family: Poppins;
   font-weight: Medium;
   font-size: 64px;
 }
@@ -45,7 +41,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: iosevka;
+  font-family: Poppins;
   font-weight: Regular;
   font-size: 36px;
   text-indent: 10px;
