@@ -90,7 +90,6 @@
   font-size: 36px;
   height: 50px;
   border-radius: 15px;
-  padding-top: 7px;
 }
 .in_list {
   border-radius: 15px;
@@ -101,7 +100,6 @@
   background-color: var(--lightbg);
   border-radius: 15px;
   height: 45px;
-  padding-top: 8px;
 }
 .link_text {
   color: var(--fg);
