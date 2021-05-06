@@ -1,4 +1,4 @@
-# Flat Startpage 1.0
+# Flat Startpage
 
 Flat minimal start page made for elegant look and simple at same time.
 

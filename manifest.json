@@ -2,15 +2,24 @@
   "manifest_version": 2,
   "name": "flat start-page",
   "short_name": "flat start-page",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Flat minimal start page made for elegant look and simple at same time.",
   "author": "mahmoudk1000",
 
   "icons": {
     "48": "images/icon.png"
   },
+
+  "background": {
+      "scripts": [
+          "js/time.js",
+          "js/weather.js"
+    ]
+  },
+
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": ["storage"]
+
+  "permissions": ["storage", "tabs", "sessions"]
 }

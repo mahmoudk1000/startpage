@@ -5,8 +5,12 @@
   --fg: #dedbeb;
   --accent: #81a0c6;
 }
+@font-face {
+  font-family: "iosevka";
+  src: url(fonts/iosevka-regular.ttf);
+}
 * {
-  font-family: Poppins;
+  font-family: iosevka;
   color: #var(--fg);
   text-decoration: none;
 }
@@ -29,7 +33,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: Poppins;
+  font-family: iosevka;
   font-weight: Medium;
   font-size: 64px;
 }
@@ -41,7 +45,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: Poppins;
+  font-family: iosevka;
   font-weight: Regular;
   font-size: 36px;
   text-indent: 10px;
@@ -90,15 +94,18 @@
   font-size: 36px;
   height: 50px;
   border-radius: 15px;
+  padding-top: 7px;
 }
 .in_list {
   border-radius: 15px;
-  height: 50px;
+  height: 45px;
+  padding-top: 8px;
 }
 .in_list:hover {
   background-color: var(--lightbg);
   border-radius: 15px;
-  height: 50px;
+  height: 45px;
+  padding-top: 8px;
 }
 .link_text {
   color: var(--fg);
