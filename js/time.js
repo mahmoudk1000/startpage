@@ -24,7 +24,7 @@ function displayClock() {
   var min = (mins = ("0" + d.getMinutes()).slice(-2));
   var hh = d.getHours();
   var ampm = "";
-  var yy = 2021;
+  var yy = d.getFullYear();
 
   if (format_12hour) {
     ampm = hh >= 12 ? " PM" : " AM";
