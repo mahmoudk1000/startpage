@@ -6,7 +6,7 @@ Flat minimal start page made for elegant look and simple at same time.
 [Figma](https://www.figma.com/file/pwdpYP5Mgg5CUtineWNqMJ/StartPage?node-id=0%3A3) for anyone who seeks interactive view.
 
 
-![Flat startpage look!](/screen.png)
+![Flat startpage look!](/scrot.png)
 
 ## Pack as web-ext
 1.  Clone the repo
