@@ -1,9 +1,9 @@
 :root {
   /* Colors */
-  --darkbg: #0e0f15;
-  --lightbg: #161821;
-  --fg: #dedbeb;
-  --accent: #81a0c6;
+  --darkbg: #121212;
+  --lightbg: #1F1F1F;
+  --fg: #FFFFFF;
+  --accent: #82BBFF;
 }
 * {
   font-family: Poppins;
