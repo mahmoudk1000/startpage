@@ -1,12 +1,16 @@
 :root {
   /* Colors */
-  --darkbg: #121212;
-  --lightbg: #1F1F1F;
-  --fg: #FFFFFF;
-  --accent: #82BBFF;
+  --darkbg: #161821;
+  --lightbg: #0f111a;
+  --fg: #ffffff;
+  --accent: #a3b8ef;
+}
+@font-face {
+  font-family: "Iosevka";
+  src: url(../fonts/iosevka-regular.ttf);
 }
 * {
-  font-family: Poppins;
+  font-family: Iosevka;
   color: #var(--fg);
   text-decoration: none;
 }
@@ -29,7 +33,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: Poppins;
+  font-family: Iosevka;
   font-weight: Medium;
   font-size: 64px;
 }
@@ -41,7 +45,7 @@
   color: var(--fg);
   justify-content: right;
   display: flex;
-  font-family: Poppins;
+  font-family: Iosevka;
   font-weight: Regular;
   font-size: 36px;
   text-indent: 10px;
@@ -88,8 +92,8 @@
   text-align: center;
   background-color: var(--lightbg);
   font-size: 36px;
-  height: 50px;
   border-radius: 15px;
+  padding: 5px;
 }
 .in_list {
   border-radius: 15px;
