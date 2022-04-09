@@ -1,13 +1,12 @@
 :root {
   /* Colors */
-  --darkbg: #161821;
-  --lightbg: #0f111a;
-  --fg: #ffffff;
-  --accent: #a3b8ef;
+  --darkbg: #11171D;
+  --lightbg: #161D25;
+  --fg: #DCDDED;
 }
 @font-face {
   font-family: "Iosevka";
-  src: url(../fonts/iosevka-regular.ttf);
+  src: url(../fonts/Iosevka-regular.ttf);
 }
 * {
   font-family: Iosevka;
@@ -24,13 +23,26 @@
   transform: translate(-50%, -50%);
 }
 .header {
-  margin-top: 10px;
+  color: var(--lightbg);
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  box-shadow: 0 0 12px 12px var(--lightbg);
+  border-radius: 25px;
+  height: 200px;
   margin: 0% auto;
   width: 1200px;
   display: flex;
 }
-.clock {
+.helo{
   color: var(--fg);
+  filter: brightness(0.85);
+  margin-left: 50px;
+  font-family: Iosevka;
+  font-size: 48px;
+}
+.clock {
+  margin-top: 34px;
+  margin-right: 50px;
   justify-content: right;
   display: flex;
   font-family: Iosevka;
@@ -42,7 +54,7 @@
   width: 100%;
 }
 .info_down {
-  color: var(--fg);
+  margin-right: 50px;
   justify-content: right;
   display: flex;
   font-family: Iosevka;
@@ -53,7 +65,7 @@
 }
 .url {
   color: var(--fg);
-  font-size: 34px;
+  font-size: 2.5em;
   text-align: center;
   border: 0px;
   background-color: var(--lightbg);
@@ -64,7 +76,6 @@
 .url:focus,
 .url:hover {
   outline: none;
-  border: #81a0c6 1px solid;
 }
 .middle {
   margin-top: 60px;
@@ -88,16 +99,18 @@
   margin-top: 20px;
 }
 .menu_name {
+  height: 50px;
+  padding-top: 10px;
   color: var(--fg);
   text-align: center;
   background-color: var(--lightbg);
   font-size: 36px;
   border-radius: 15px;
-  padding: 5px;
 }
 .in_list {
   border-radius: 15px;
   height: 45px;
+  vertical-align: middle;
 }
 .in_list:hover {
   background-color: var(--lightbg);
@@ -106,4 +119,5 @@
 }
 .link_text {
   color: var(--fg);
+  vertical-align: middle;
 }
