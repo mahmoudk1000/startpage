@@ -1,17 +1,15 @@
 :root {
   /* Colors */
-  --darkbg: #161821;
-  --lightbg: #0f111a;
-  --fg: #ffffff;
-  --accent: #a3b8ef;
+  --darkbg: #11171D;
+  --lightbg: #161D25;
+  --fg: #E2E8EE;
 }
 @font-face {
   font-family: "Iosevka";
-  src: url(../fonts/iosevka-regular.ttf);
+  src: url(../fonts/Iosevka-regular.ttf);
 }
 * {
   font-family: Iosevka;
-  color: #var(--fg);
   text-decoration: none;
 }
 .body {
@@ -24,36 +22,48 @@
   transform: translate(-50%, -50%);
 }
 .header {
-  margin-top: 10px;
+  color: var(--darkbg);
+  height: 100px;
   margin: 0% auto;
-  width: 1200px;
+  width: 1320px;
   display: flex;
+  background-image: linear-gradient(to right, #D7C1ED, #96CDFB, #B5E8E0, #F28FAD);
+  border-radius: 8px;
+}
+.helo{
+  margin-left: 20px;
+  margin-top: 14px;
+  font-family: Iosevka;
+  font-size: 28px;
 }
 .clock {
-  color: var(--fg);
   justify-content: right;
   display: flex;
   font-family: Iosevka;
   font-weight: Medium;
-  font-size: 64px;
+  font-size: 48px;
+  margin-top: 5px;
 }
 .info {
-  text-align: right;
-  width: 100%;
-}
-.info_down {
-  color: var(--fg);
+  width: 150px;
+  margin-left: auto;
+  margin-right: 20px;
+  display: inline-flex;
+  position: relative;
   justify-content: right;
+}
+.info_right{
   display: flex;
   font-family: Iosevka;
-  font-weight: Regular;
-  font-size: 36px;
-  text-indent: 10px;
-  height: 50px;
+  font-size: 26px;
+  text-indent: 4px;
+  height: 40px;
+  bottom: 0;
+  position: absolute;
 }
 .url {
   color: var(--fg);
-  font-size: 34px;
+  font-size: 2.5em;
   text-align: center;
   border: 0px;
   background-color: var(--lightbg);
@@ -64,7 +74,6 @@
 .url:focus,
 .url:hover {
   outline: none;
-  border: #81a0c6 1px solid;
 }
 .middle {
   margin-top: 60px;
@@ -88,22 +97,39 @@
   margin-top: 20px;
 }
 .menu_name {
+  height: 50px;
+  padding-top: 10px;
   color: var(--fg);
   text-align: center;
   background-color: var(--lightbg);
   font-size: 36px;
   border-radius: 15px;
-  padding: 5px;
 }
-.in_list {
-  border-radius: 15px;
-  height: 45px;
+.in_list_general {
+  color: var(--fg);
+  border-radius: 8px;
+  height: 40px;
+  text-align: left;
+  padding-left: 25px;
 }
-.in_list:hover {
-  background-color: var(--lightbg);
-  border-radius: 15px;
-  height: 45px;
+.in_list_one:hover {
+  color: #11171D;
+  background-color: #D7C1ED;
+}
+.in_list_two:hover {
+  color: #11171D;
+  background-color: #96CDFB;
+}
+.in_list_three:hover {
+  color: #11171D;
+  background-color: #B5E8E0;
+}
+.in_list_four:hover {
+  color: #11171D;
+  background-color: #F28FAD;
 }
 .link_text {
   color: var(--fg);
+  vertical-align: middle;
+  font-variant: small-caps;
 }

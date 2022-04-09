@@ -1,17 +1,14 @@
-# Flat Startpage
+# Startpage
 
 Flat minimal start page made for elegant look and simple at same time.
-
-
-[Figma](https://www.figma.com/file/pwdpYP5Mgg5CUtineWNqMJ/StartPage?node-id=0%3A3) for anyone who seeks interactive view.
-
+there is more than branch every one have a unique ui.
 
 ![Flat startpage look!](/scrot.png)
 
 ## Pack as web-ext
 1.  Clone the repo
 ```
-git clone https://github.com/mahmoudk1000/flat-startpage.git
+git clone https://github.com/mahmoudk1000/startpage.git
 ```
 
 2.  You need to install web--ext tool by runing terminal<br>
@@ -44,10 +41,6 @@ function setPosition(position) {
 }
 ```
 
-## Update Pic photo
-replace pic.png from images folder with the one you want.<br>
-Note: The image could be square the rounded code from css. so i recommend to be square,
-and also it would be good if it in 150px height and 150px wight too.
 
 ## Credits
 
