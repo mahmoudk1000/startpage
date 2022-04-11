@@ -1,9 +1,6 @@
-# Flat Startpage
+# Bild-flat Startpage
 
 Flat minimal start page made for elegant look and simple at same time.
-
-
-[Figma](https://www.figma.com/file/pwdpYP5Mgg5CUtineWNqMJ/StartPage?node-id=0%3A3) for anyone who seeks interactive view.
 
 
 ![Flat startpage look!](/scrot.png)
@@ -11,7 +8,7 @@ Flat minimal start page made for elegant look and simple at same time.
 ## Pack as web-ext
 1.  Clone the repo
 ```
-git clone https://github.com/mahmoudk1000/flat-startpage.git
+git clone https://github.com/mahmoudk1000/startpage.git
 ```
 
 2.  You need to install web--ext tool by runing terminal<br>
