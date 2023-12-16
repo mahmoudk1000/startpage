@@ -14,11 +14,21 @@ function displayClock() {
     "Nov",
     "Dec",
   ];
+  const daysOfWeek = [
+    'Sun',
+    'Mon',
+    'Tues',
+    'Wed',
+    'Thurs',
+    'Fri',
+    'Sat'
+  ];
 
   // Set to true to use a 12 hour date format
   var format_12hour = false;
 
   var d = new Date();
+  var dn = daysOfWeek[d.getDay()];
   var mm = monthNames[d.getMonth()];
   var dd = d.getDate();
   var min = (mins = ("0" + d.getMinutes()).slice(-2));
@@ -36,6 +46,7 @@ function displayClock() {
   document.getElementById("separator").innerHTML = " : ";
   document.getElementById("minutes").innerText = min + ampm;
 
+  document.getElementById("dow").innerText = dn;
   document.getElementById("day").innerText = dd;
   document.getElementById("month").innerText = mm;
   document.getElementById("year").innerText = yy;
