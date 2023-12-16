@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "flat start-page",
-  "short_name": "flat start-page",
+  "name": "start-page-colors",
+  "short_name": "start-page-colors",
   "version": "3.0",
-  "description": "Flat minimal start page made for elegant look and simple at same time.",
+  "description": "Minimal start page made for elegant look and simple at same time.",
   "author": "mahmoudk1000",
 
   "icons": {
