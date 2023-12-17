@@ -5,7 +5,7 @@
   --fg: #E2E8EE;
 }
 @font-face {
-  font-family: "Iosevka";
+  font-family: Iosevka;
   src: url(../fonts/Iosevka-regular.ttf);
 }
 * {
@@ -24,15 +24,15 @@
 .header {
   color: var(--darkbg);
   height: fit-content;
-  margin: 0% auto;
   width: 100%;
   display: flex;
   background-image: linear-gradient(to right, #D7C1ED, #96CDFB, #B5E8E0, #F28FAD);
   border-radius: 8px;
+  align-items: center;
 }
-.helo{
-  margin-left: 1.5%;
-  font-size: 22px;
+.quote {
+  font-size: 21px;
+  margin: 1.5%;
 }
 .header > h1 {
   flex: 80%;
@@ -41,24 +41,21 @@
   flex: 20%;
 }
 .info {
-  margin-right: 1.5%;
+  align-items: center;
+  margin: 1.5%;
+}
+.clock,
+.temp {
+  display: flex;
+  justify-content: right;
 }
 .clock {
-  display: flex;
-  height: 50%;
-  font-size: 32px;
-  justify-content: right;
-  align-items: center;
-}
-.clock > div {
-  margin: 0 1px;
+  font-size: 28px;
+  align-items: end;
 }
 .temp {
-  height: 50%;
-  display: flex;
   font-size: 14px;
   text-indent: 3px;
-  justify-content: right;
   align-items: center;
 }
 .bookmarks {

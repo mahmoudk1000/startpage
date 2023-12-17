@@ -1,4 +1,4 @@
-const tempElement = document.querySelector(".temperature-value p");
+const tempElement = document.querySelector(".temperature-value span");
 
 // App data
 const weather = {};
@@ -11,7 +11,7 @@ var tempUnit = "C";
 
 const KELVIN = 273.15;
 // Use your own key for the Weather, Get it here: https://openweathermap.org/
-const key = "Your Key";
+const key = "";
 
 // Set Position function
 setPosition();
@@ -19,8 +19,8 @@ setPosition();
 function setPosition(position) {
   // Here you can change your position
   // You can use https://www.latlong.net/ to get it! (I use San Francisco as an example)
-  let latitude = Value;
-  let longitude = Value;
+  let latitude = ;
+  let longitude = ;
 
   getWeather(latitude, longitude);
 }
