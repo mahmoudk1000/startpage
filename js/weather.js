@@ -1,3 +1,7 @@
+const KEY = process.env.KEY;
+const LATITUDE = process.env.LATITUDE;
+const LONGITUDE = process.env.LONGITUDE;
+
 const tempElement = document.querySelector(".temperature-value span");
 
 // App data
@@ -10,8 +14,6 @@ weather.temperature = {
 var tempUnit = "C";
 
 const KELVIN = 273.15;
-// Use your own key for the Weather, Get it here: https://openweathermap.org/
-const key = "";
 
 // Set Position function
 setPosition();
@@ -19,15 +21,12 @@ setPosition();
 function setPosition(position) {
   // Here you can change your position
   // You can use https://www.latlong.net/ to get it! (I use San Francisco as an example)
-  let latitude = ;
-  let longitude = ;
-
-  getWeather(latitude, longitude);
+  getWeather(LATITUDE, LONGITUDE);
 }
 
 // Get the Weather data
 function getWeather(latitude, longitude) {
-  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${KEY}`;
 
   console.log(api);
 
