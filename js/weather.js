@@ -1,6 +1,6 @@
-const KEY = "";
-const LATITUDE = 0;
-const LONGITUDE = 0;
+const key = "";
+const latitude = 0;
+const longitude = 0;
 
 const tempElement = document.querySelector(".temperature-value span");
 
@@ -21,12 +21,12 @@ setPosition();
 function setPosition(position) {
   // Here you can change your position
   // You can use https://www.latlong.net/ to get it! (I use San Francisco as an example)
-  getWeather(LATITUDE, LONGITUDE);
+  getWeather(latitude, longitude)
 }
 
 // Get the Weather data
 function getWeather(latitude, longitude) {
-  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${KEY}`;
+  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
   console.log(api);
 
