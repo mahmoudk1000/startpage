@@ -4,6 +4,7 @@
   --lightbg: #161D25;
   --fg: #E2E8EE;
 }
+
 @font-face {
   font-family: Iosevka;
   src: url(../fonts/Iosevka-regular.ttf);
@@ -12,6 +13,49 @@
   font-family: Iosevka;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .body {
+    padding: 10px;
+  }
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .header > h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .info {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .clock {
+    margin-bottom: 10px;
+  }
+  .bookmarks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .menu_place {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  .list {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .menu_name {
+    margin-bottom: 10px;
+  }
+}
+
 .body {
   background-color: var(--darkbg);
   margin: 0;
