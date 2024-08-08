@@ -1,6 +1,6 @@
-const KEY = process.env.KEY;
-const LATITUDE = process.env.LATITUDE;
-const LONGITUDE = process.env.LONGITUDE;
+const KEY = "";
+const LATITUDE = 0;
+const LONGITUDE = 0;
 
 const tempElement = document.querySelector(".temperature-value span");
 

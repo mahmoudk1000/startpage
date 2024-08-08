@@ -20,11 +20,11 @@ jobs:
         run: npm install
       - name: Install web-ext
         run: npm install --global web-ext
-      - name: Build with environment variables
+      - name: Inject environment variables into weather.js
         run: |
-          echo "KEY=$KEY" >> .env
-          echo "LATITUDE=$LATITUDE" >> .env
-          echo "LONGITUDE=$LONGITUDE" >> .env
+          sed -i 's/const KEY = "";/const KEY = "${{ secrets.KEY }}";/' js/weather.js
+          sed -i 's/const LATITUDE = 0;/const LATITUDE = ${ { secrets.LATITUDE }};/' js/weather.js
+          sed -i 's/const LONGITUDE = 0;/const LONGITUDE = ${ { secrets.LONGITUDE }};/' js/weather.js
       - name: Build and Sign extension
         env:
           FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
