@@ -1,0 +1,41 @@
+name: Build
+on:
+  push:
+    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      KEY: ${{ secrets.KEY }}
+      LATITUDE: ${{ secrets.LATITUDE }}
+      LONGITUDE: ${{ secrets.LONGITUDE }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Install web-ext
+        run: npm install --global web-ext
+      - name: Build with environment variables
+        run: |
+          echo "KEY=$KEY" >> .env
+          echo "LATITUDE=$LATITUDE" >> .env
+          echo "LONGITUDE=$LONGITUDE" >> .env
+      - name: Build and Sign extension
+        env:
+          FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
+        run: |
+          web-ext sign \
+            --channel=unlisted \
+            --api-key=$FIREFOX_JWT_ISSUER \
+            --api-secret=$FIREFOX_JWT_SECRET
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firefox-extension
+          path: web-ext-artifacts/*.xpi
