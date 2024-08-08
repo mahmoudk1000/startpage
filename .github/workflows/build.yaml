@@ -34,8 +34,11 @@ jobs:
             --channel=unlisted \
             --api-key=$FIREFOX_JWT_ISSUER \
             --api-secret=$FIREFOX_JWT_SECRET
+      - name: Unarchive build artifact
+        run: |
+          unzip firefox-extension.zip -d ./artifacts
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: firefox-extension
-          path: web-ext-artifacts/*.xpi
+          path: artifacts/*.xpi
