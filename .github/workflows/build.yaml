@@ -17,6 +17,11 @@ jobs:
         run: npm install
       - name: Install web-ext
         run: npm install --global web-ext
+      - name: Extract version from manifest.json
+        id: get_version
+        run: |
+          version=$(jq -r '.version' manifest.json)
+          echo "version=$version" >> $GITHUB_ENV
       - name: Inject environment variables into weather.js
         run: |
           sed -i 's/const key = "";/const key = "${{ secrets.KEY }}";/' js/weather.js
@@ -39,6 +44,7 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1.14.0
         with:
+          tag: ${{ env.version }}
           artifacts: "web-ext-artifacts/*.xpi"
           allowUpdates: true
           replacesArtifacts: true
