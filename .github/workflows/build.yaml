@@ -1,8 +1,8 @@
 ---
-name: Build
+name: Releases
 on:
   push:
-    branches: ["main"]
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,13 +21,14 @@ jobs:
         id: get_version
         run: |
           version=$(jq -r '.version' manifest.json)
-          echo "version=$version" >> $GITHUB_ENV
+          echo "VERSION=$version" >> $GITHUB_ENV
       - name: Inject environment variables into weather.js
         run: |
           sed -i 's/const key = "";/const key = "${{ secrets.KEY }}";/' js/weather.js
           sed -i 's/const latitude = 0;/const latitude = ${{ secrets.LATITUDE }};/' js/weather.js
           sed -i 's/const longitude = 0;/const longitude = ${{ secrets.LONGITUDE }};/' js/weather.js
-      - name: Build and Sign extension
+      - name: Build and Sign Extension
+        id: build
         env:
           FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
           FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
@@ -35,17 +36,26 @@ jobs:
           web-ext sign \
             --channel=unlisted \
             --api-key=$FIREFOX_JWT_ISSUER \
-            --api-secret=$FIREFOX_JWT_SECRET
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: firefox-extension
-          path: web-ext-artifacts/*.xpi
+            --api-secret=$FIREFOX_JWT_SECRET | tee >(cat) | \
+              grep "^Generated extension ID:" | \
+              xargs -I {} echo "EXTENSION_ID={}" >> $GITHUB_ENV
+      - name: Prep Artifact
+        run: |
+          mv web-ext-artifacts/*.xpi web-ext-artifacts/startpage-${{ env.version }}.xpi
+      - name: Generate SHA-256 SRI hash for xpi file
+        id: generate_sri
+        run: |
+          XPI_FILE=$(ls web-ext-artifacts/*.xpi)
+          SHA256_HASH=$(sha256sum "$XPI_FILE" | awk '{print $1}' | xxd -r -p | base64)
+          echo "SRI_HASH=sha256-$SHA256_HASH" >> $GITHUB_ENV
       - name: Release
         uses: ncipollo/release-action@v1.14.0
         with:
-          tag: ${{ env.version }}
-          artifacts: "web-ext-artifacts/*.xpi"
+          tag: ${{ env.VERSION }}
+          artifacts: web-ext-artifacts/startpage-${{ env.VERSION }}.xpi
           allowUpdates: true
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          body: |-
+            ${{ env.EXTENSION_ID }}
+            SHA-256: `${{ env.SRI_HASH }}`
