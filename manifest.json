@@ -5,21 +5,21 @@
   "version": "3.1.1",
   "description": "Minimal start page made for elegant look and simple at same time.",
   "author": "mahmoudk1000",
-
   "icons": {
     "48": "images/icon.png"
   },
-
   "background": {
     "scripts": [
       "js/time.js",
       "js/weather.js"
     ]
   },
-
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-
-  "permissions": ["storage", "tabs", "sessions"]
+  "permissions": [
+    "storage",
+    "tabs",
+    "sessions"
+  ]
 }

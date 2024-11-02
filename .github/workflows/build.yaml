@@ -1,3 +1,4 @@
+---
 name: Build
 on:
   push:
@@ -35,3 +36,10 @@ jobs:
         with:
           name: firefox-extension
           path: web-ext-artifacts/*.xpi
+      - name: Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          artifacts: "web-ext-artifacts/*.xpi"
+          allowUpdates: true
+          replacesArtifacts: true
+          token: ${{ secrets.GITHUB_TOKEN }}
