@@ -41,12 +41,12 @@ jobs:
               xargs -I {} echo "EXTENSION_ID={}" >> $GITHUB_ENV
       - name: Prep Artifact
         run: |
-          mv web-ext-artifacts/*.xpi web-ext-artifacts/startpage-${{ env.version }}.xpi
+          mv web-ext-artifacts/*.xpi web-ext-artifacts/startpage-${{ env.VERSION }}.xpi
       - name: Generate SHA-256 SRI hash for xpi file
         id: generate_sri
         run: |
-          XPI_FILE=$(ls web-ext-artifacts/*.xpi)
-          SHA256_HASH=$(sha256sum "$XPI_FILE" | awk '{print $1}' | xxd -r -p | base64)
+          SHA256_HASH=$(openssl dgst -sha256 -binary web-ext-artifacts/startpage-${{ env.VERSION }}.xpi | \
+            openssl base64 -A)
           echo "SRI_HASH=sha256-$SHA256_HASH" >> $GITHUB_ENV
       - name: Release
         uses: ncipollo/release-action@v1.14.0
